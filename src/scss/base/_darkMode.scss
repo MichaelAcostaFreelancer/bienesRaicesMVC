@@ -8,13 +8,13 @@
   h2,
   h3,
   h4 {
-    color: $gris;
+    color: $blanco;
   }
   .anuncio {
     background-color: $grisOscuro;
     border: 1px solid $grisOscuro;
     .icono {
-      filter: invert(70%);
+      filter: none;
     }
   }
   .texto-nosotros {
@@ -34,11 +34,12 @@
       background-color: $grisOscuro;
       color: $blanco;
       border: 1px solid $grisOscuro;
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
     }
   }
   .resumen-propiedad {
     .icono {
-      filter: invert(70%);
+      filter: none;
     }
     .precio {
       color: $verde;

@@ -6,7 +6,7 @@
             <picture>
                 <source srcset="build/img/nosotros.webp" type="webp">
                 <source srcset="build/img/nosotros.jpg" type="jpeg">
-                <img loading="lazy" src="build/img/nosotros.jpg" alt="Sobre nosotros">
+                <img loading="lazy" src="/build/img/nosotros.jpg" alt="Sobre nosotros">
             </picture>
         </div>
 

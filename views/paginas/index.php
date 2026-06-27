@@ -1,5 +1,5 @@
 
-<main class="contendor seccion">
+<main class="contenedor seccion">
     <h1>Más Sobre Nosotros</h1>
 
     <?php include 'iconos.php' ?>
@@ -30,7 +30,7 @@
 
         <article class="entrada-blog">
             <div class="imagen">
-                <img loading="lazy" src="build/img/blog1.jpg" alt="Entrada de blog">
+                <img loading="lazy" src="/build/img/blog1.jpg" alt="Entrada de blog">
             </div>
 
             <div class="texto-entrada">
@@ -51,7 +51,7 @@
                 <picture>
                     <source srcset="build/img/blog2.webp" type="image-webp">
                     <source srcset="build/img/blog2.jpg" type="image-jpeg">
-                    <img loading="lazy" src="build/img/blog2.jpg" alt="Entrada de blog">
+                    <img loading="lazy" src="/build/img/blog2.jpg" alt="Entrada de blog">
                 </picture>
             </div>
 

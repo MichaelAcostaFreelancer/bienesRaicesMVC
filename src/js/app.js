@@ -5,24 +5,32 @@ document.addEventListener("DOMContentLoaded", function () {
 function darkMode() {
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
 
-  if (prefersDarkMode) {
-    document.body.classList.add("dark-mode");
+  const applyTheme = (mode) => {
+    if (mode === "dark") document.body.classList.add("dark-mode");
+    else document.body.classList.remove("dark-mode");
+  };
+
+  // Preferencia guardada por el usuario (localStorage)
+  const stored = localStorage.getItem("theme");
+  if (stored) {
+    applyTheme(stored);
   } else {
-    document.body.classList.remove("dark-mode");
+    applyTheme(prefersDarkMode.matches ? "dark" : "light");
   }
 
-  prefersDarkMode.addEventListener("change", function () {
-    if (prefersDarkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
+  // Si el sistema cambia y el usuario no ha elegido explícitamente, actualizar
+  prefersDarkMode.addEventListener("change", () => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(prefersDarkMode.matches ? "dark" : "light");
     }
   });
 
   const darkModebtn = document.querySelector(".dark-mode-boton");
+  if (!darkModebtn) return;
 
   darkModebtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 }
 function eventListeners() {

@@ -21,6 +21,7 @@
                 <th>Título</th>
                 <th>Imagen</th>
                 <th>Precio</th>
+                <th>Acciones</th>
             </tr>
         </thead>
 
@@ -55,6 +56,7 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Telefono</th>
+                <th>Acciones</th>
             </tr>
         </thead>
 

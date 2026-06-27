@@ -17,7 +17,7 @@ class Propiedad extends ActiveRecord
         'wc',
         'estacionamiento',
         'creado',
-        'vendedores_id'
+        'vendedorId'
     ];
 
     public $id;
@@ -29,7 +29,7 @@ class Propiedad extends ActiveRecord
     public $wc;
     public $estacionamiento;
     public $creado;
-    public $vendedores_id;
+    public $vendedorId;
 
     public function __construct($args = [])
     {
@@ -42,7 +42,7 @@ class Propiedad extends ActiveRecord
         $this->wc = $args['wc'] ?? '';
         $this->estacionamiento = $args['estacionamiento'] ?? '';
         $this->creado = date('Y/m/d');
-        $this->vendedores_id = $args['vendedores_id'] ?? '';
+        $this->vendedorId = $args['vendedorId'] ?? '';
     }
 
     public function validar()
@@ -71,7 +71,7 @@ class Propiedad extends ActiveRecord
             self::$errores[] = "El número de estacionamientos es obligatorio";
         }
 
-        if (!$this->vendedores_id) {
+        if (!$this->vendedorId) {
             self::$errores[] = "Eligé un vendedor";
         }
 
